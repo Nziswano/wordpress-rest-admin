@@ -1,7 +1,6 @@
-version: '3.5'
+version: "3.5"
 
 services:
-
   react:
     build:
       context: .
@@ -30,16 +29,16 @@ services:
       - db
 
   db:
-    image: mysql:5.7
+    image: mariadb:latest
     restart: always
     ports:
-     - 8806:3306
+      - 8806:3306
     environment:
-      MYSQL_DATABASE: 'wordpress'
-      MYSQL_USER: 'wordpress'
-      MYSQL_PASSWORD: 'wordpress'
-      MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: "wordpress"
+      MYSQL_USER: "wordpress"
+      MYSQL_PASSWORD: "wordpress"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_HOST: "%"
     volumes:
       - db:/var/lib/db
     command: --default-authentication-plugin=mysql_native_password

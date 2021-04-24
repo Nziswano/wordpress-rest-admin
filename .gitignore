@@ -25,3 +25,4 @@ yarn-error.log*
 flush.sh
 Vagrantfile
 .vagrant/
+.vscode/settings.json

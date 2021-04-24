@@ -19,7 +19,7 @@ wp rewrite structure '/%postname%/' --allow-root
 
 # Add constants needed for JWT plugin
 sed -i "s/<?php/\<\?php\ndefine\('JWT_AUTH_SECRET_KEY\',\'demo\');/g" /var/www/html/wp-config.php
-sed -i "s/<?php/\<\?php\ndefine('JWT_AUTH_CORS_ENABLE', true);/g" /var/www/html/wp-config.php
+# sed -i "s/<?php/\<\?php\ndefine('JWT_AUTH_CORS_ENABLE', true);/g" /var/www/html/wp-config.php
 
 # Set rewrite rules
 cat > .htaccess <<-'EOF'
